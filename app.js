@@ -34,6 +34,9 @@ app.use(
 
 // create Session table if it doesn't already exist
 store.sync();
+const somePathVariable = "stuff, this is bad and nothing will work";
+
+app.use('/somepath', somePathVariable)
 
 app.use('/', indexRouter);
 app.use('/potato', usersRouter);
